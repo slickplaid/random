@@ -10,5 +10,6 @@
     , "connect-redis": "1.2.x"
     , "sanitizer": "0.0.x"
     , "http-proxy": "0.x.x"
+    , "ejs": "x.x.x"
   }
 }
