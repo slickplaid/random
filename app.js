@@ -27,6 +27,10 @@ app.get('/', function(req, res) {
   res.render('index.ejs', { layout: false });
 });
 
+app.get('/live', function(req, res) {
+  res.render('live.ejs', { layout: false });
+});
+
 app.get('*', function(req, res) {
   res.redirect('/');
 });
