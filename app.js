@@ -27,7 +27,6 @@ app.configure(function() {
   app.register('.html', require('ejs'));
   app.set('view engine', 'html');
   app.set('view options', { layout: 'layouts/layout' });
-
 });
 
 app.get('*', function(req, res, next) {
