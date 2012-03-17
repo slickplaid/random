@@ -44,7 +44,7 @@ app.get('/live', function(req, res) {
 });
 
 app.get('/google6d38451c2406dbde.html', function(req, res) {
-  res.render('google6d38451c2406dbde', { layout: false });
+  res.render('google6d38451c2406dbde.ejs', { layout: false });
 });
 
 app.get('*', function(req, res) {
