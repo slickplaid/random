@@ -35,7 +35,8 @@ app.get('*', function(req, res, next) {
 });
 
 app.get('/', function(req, res) {
-  res.render('index.ejs', { layout: false });
+  //res.render('index.ejs', { layout: false });
+  res.redirect('http://ecigtv.com/live');  
 });
 
 app.get('/live', function(req, res) {
@@ -43,7 +44,7 @@ app.get('/live', function(req, res) {
 });
 
 app.get('*', function(req, res) {
-  res.redirect('/');
+  res.redirect('http://ecigtv.com/live');
 });
 
 app.listen(4000);
