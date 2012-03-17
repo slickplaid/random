@@ -23,6 +23,10 @@ app.configure(function() {
 
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); 
 
+  app.set('views', __dirname+'/views');
+  app.register('.html', require('ejs'));
+  app.set('view engine', 'html');
+  app.set('view options', { layout: 'layouts/layout' });
 
 });
 
