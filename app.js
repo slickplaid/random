@@ -43,6 +43,10 @@ app.get('/live', function(req, res) {
   res.render('live.ejs', { layout: false });
 });
 
+app.get('/google6d38451c2406dbde.html', function(req, res) {
+  res.render('google6d38451c2406dbde', { layout: false });
+});
+
 app.get('*', function(req, res) {
   res.redirect('http://ecigtv.com/live');
 });
