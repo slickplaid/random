@@ -4,7 +4,7 @@ var httpProxy = require('http-proxy');
 var options = {
   router: {
     'ecigtv.com': '127.0.0.1:4000',
-    'www.ecigtv.com': 'ecigtv.com',
+    'www.ecigtv.com': '127.0.0.1:4000',
     'lavacorps.internationalvapersclub.com': '127.0.0.1:3001'
   }
 }
@@ -22,6 +22,13 @@ app.configure(function() {
   app.use(app.router);
 
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); 
+
+
+});
+
+app.get('*', function(req, res, next) {
+  console.log(req.header('host'));
+  next();
 });
 
 app.get('/', function(req, res) {
