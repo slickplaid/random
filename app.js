@@ -47,6 +47,7 @@ app.get('/live', function(req, res) {
   res.render('live', { layout: false });
 });
 
+// webmaster tools
 app.get('/google6d38451c2406dbde.html', function(req, res) {
   res.render('google6d38451c2406dbde', { layout: false });
 });
