@@ -39,16 +39,16 @@ app.get('*', function(req, res, next) {
 });
 
 app.get('/', function(req, res) {
-  //res.render('index.ejs', { layout: false });
+  //res.render('index', { layout: false });
   res.redirect('http://ecigtv.com/live');  
 });
 
 app.get('/live', function(req, res) {
-  res.render('live.ejs', { layout: false });
+  res.render('live', { layout: false });
 });
 
 app.get('/google6d38451c2406dbde.html', function(req, res) {
-  res.render('google6d38451c2406dbde.ejs', { layout: false });
+  res.render('google6d38451c2406dbde', { layout: false });
 });
 
 app.get('*', function(req, res) {
