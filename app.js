@@ -27,8 +27,11 @@ app.configure(function() {
 });
 
 app.get('*', function(req, res, next) {
-  console.log(req.header('host'));
-  next();
+  if(req.header('host') !== 'ecigtv.com') {
+    res.redirect('http://ecigtv.com/', 301);
+  } else {
+    next();
+  }
 });
 
 app.get('/', function(req, res) {
