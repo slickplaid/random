@@ -4,6 +4,7 @@ var httpProxy = require('http-proxy');
 var options = {
   router: {
     'ecigtv.com': '127.0.0.1:4000',
+    'www.ecigtv.com': 'ecigtv.com',
     'lavacorps.internationalvapersclub.com': '127.0.0.1:3001'
   }
 }
